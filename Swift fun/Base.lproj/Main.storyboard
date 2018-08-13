@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,14 +17,72 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWP-Nc-UOL">
+                                <rect key="frame" x="429" y="768" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-ii-3hF">
+                                <rect key="frame" x="155" y="229.5" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trn-35-9EE">
+                                <rect key="frame" x="126.5" y="316" width="67" height="30"/>
+                                <state key="normal" title="Count me"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cR-v8-glr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEU-cF-YqT">
+                                <rect key="frame" x="85" y="131" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Nxs-5r-Cgd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akp-wW-w99">
+                                <rect key="frame" x="85" y="191" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3JD-JI-aCb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Fgf-Uq-KiW"/>
+                                    <constraint firstAttribute="width" constant="150" id="FkC-ET-19k"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="akp-wW-w99" firstAttribute="top" secondItem="oEU-cF-YqT" secondAttribute="bottom" constant="30" id="4JW-ZI-1lt"/>
+                            <constraint firstItem="akp-wW-w99" firstAttribute="top" secondItem="oEU-cF-YqT" secondAttribute="bottom" constant="30" id="6wV-Ve-Qka"/>
+                            <constraint firstItem="7h8-ii-3hF" firstAttribute="firstBaseline" secondItem="akp-wW-w99" secondAttribute="baseline" constant="24.333333333333332" symbolType="layoutAnchor" id="Fsb-Sc-c2v"/>
+                            <constraint firstItem="7h8-ii-3hF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GCS-4l-e7C"/>
+                            <constraint firstItem="7h8-ii-3hF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="On6-Cg-NMP"/>
+                            <constraint firstItem="akp-wW-w99" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XXh-Ua-rYZ"/>
+                            <constraint firstItem="trn-35-9EE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZjH-7Y-S8X"/>
+                            <constraint firstItem="oEU-cF-YqT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="apW-dt-xzW"/>
+                            <constraint firstItem="7h8-ii-3hF" firstAttribute="top" secondItem="akp-wW-w99" secondAttribute="bottom" constant="8.6666666666666856" id="t9D-SA-wyj"/>
+                            <constraint firstItem="trn-35-9EE" firstAttribute="top" secondItem="7h8-ii-3hF" secondAttribute="bottom" constant="65.5" id="wiI-8n-5Eg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myFirstLabel" destination="7h8-ii-3hF" id="PwA-Ue-G9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2342.0289855072465" y="-996.19565217391312"/>
         </scene>
     </scenes>
 </document>

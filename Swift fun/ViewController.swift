@@ -7,19 +7,26 @@
 //
 
 import UIKit
-
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myFirstLabel: UILabel!
+    var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         // Do any additional setup after loading the view, typically from a nib.
+    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonTapped(_ sender: Any) {
+        count = count + 1
+        myFirstLabel.text = String(count)
+        
+        print("I'm developing iOS native app")
+        
+        if count >= 10
+        {
+            view.backgroundColor = UIColor.green
+        }
     }
-
-
 }
-
